@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón de los Sueños - Biblioteca</title>
+    <!-- Conexión con el archivo CSS externo -->
+    <link rel="stylesheet" href="stbiblio.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-contenedor">
+            <div class="logo-icono">📖</div>
+            <h1>El Rincón de los Sueños</h1>
+        </div>
+        <div class="subtitulo">Tu próxima gran aventura literaria comienza aquí</div>
+    </header>
+    
+<nav class="barra-navegacion">
+        <button id="btnIntroduccion" class="boton-introduccion">✨ Introducción</button>
+    </nav>
+
+    <main>
+        <!-- Galería de imágenes destacadas -->
+        <div class="galeria-libros">
+            <div class="tarjeta-libro">
+                <img src="https://unsplash.com" alt="Libro de Poesía">
+                <p>Novedades Editoriales</p>
+            </div>
+            <div class="tarjeta-libro">
+                <img src="https://unsplash.com" alt="Libros antiguos">
+                <p>Joyas de la Literatura</p>
+            </div>
+            <div class="tarjeta-libro">
+                <img src="https://unsplash.com" alt="Estantes de biblioteca">
+                <p>Colecciones Completas</p>
+            </div>
+        </div>
+
+        <!-- Contenedor interactivo del botón -->
+        <div class="contenedor-dropdown" id="dropdownArea">
+            <button class="boton-generos" id="btnGeneros">Géneros</button>
+            
+            <div class="menu-desplegable" id="menuGeneros">
+                <a href="#">Policial</a>
+                <a href="#">Novelas</a>
+                <a href="#">Psicoanálisis</a>
+                <a href="#">Poesía</a>
+                <a href="#">Teatral</a>
+                <a href="#">Microrrelato</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Conexión con el archivo JavaScript externo -->
+    <script src="Biblio.js"></script>
+</body>
+</html>

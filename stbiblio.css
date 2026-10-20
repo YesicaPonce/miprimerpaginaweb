@@ -1,0 +1,199 @@
+/* --- ESTILOS GENERALES Y FONDO DE LIBROS --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                url('https://unsplash.com') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- ENCABEZADO Y LOGO --- */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo-icono {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4af37, #ffffff, #aaa, #ffd700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    font-size: 30px;
+}
+/* --- NUEVOS ESTILOS PARA EL BOTÓN DE INTRODUCCIÓN --- */
+.barra-navegacion {
+    margin-bottom: 20px;
+}
+
+.boton-introduccion {
+    background: linear-gradient(135deg, #e5e5e5, #ffffff, #aaaaaa); /* Plateado brillante */
+    color: #0a192f; /* Texto oscuro para máxima legibilidad */
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid #d4af37; /* Borde Dorado */
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(229, 229, 229, 0.2);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.boton-introduccion:hover {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5); /* Destello dorado */
+    transform: scale(1.05);
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(135deg, #fff 20%, #d4af37 50%, #e5e5e5 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    color: #a0aec0;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* --- CONTENIDO PRINCIPAL E IMÁGENES --- */
+main {
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    padding-bottom: 60px;
+}
+
+.galeria-libros {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tarjeta-libro {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(229, 229, 229, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.tarjeta-libro:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.tarjeta-libro img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.tarjeta-libro p {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    color: #e5e5e5;
+    font-weight: 500;
+}
+
+/* --- BOTÓN DE GÉNEROS Y MENÚ DESPLEGABLE --- */
+.contenedor-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.boton-generos {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Azul */
+    color: #ffffff;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #e5e5e5; /* Plateado */
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.boton-generos:hover {
+    border-color: #d4af37; /* Dorado */
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.6);
+    transform: scale(1.05);
+}
+
+.menu-desplegable {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(10, 25, 47, 0.95);
+    border: 2px solid #d4af37;
+    min-width: 200px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.6);
+    border-radius: 12px;
+    z-index: 10;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.menu-desplegable a {
+    color: #e5e5e5;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+    text-align: center;
+}
+
+.menu-desplegable a:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: #ffffff;
+}
+
+/* Esta clase es la que añade JavaScript dinámicamente para cambiar el CSS */
+.mostrar {
+    display: block;
+}
